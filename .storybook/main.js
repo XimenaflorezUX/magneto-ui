@@ -54,6 +54,12 @@ module.exports = {
       })
     ]
 
+    // GitHub Pages project site: https://<user>.github.io/<repo>/
+    const basePath = process.env.STORYBOOK_BASE_PATH
+    if (basePath) {
+      config.output = { ...config.output, publicPath: basePath }
+    }
+
     return config
   }
 }
