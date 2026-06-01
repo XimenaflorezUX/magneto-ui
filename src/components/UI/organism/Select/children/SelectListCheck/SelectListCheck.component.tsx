@@ -27,7 +27,8 @@ const Component = <T,>({ className, renderItem = defaultRenderItem, filter = def
         .map((option) => (
           <li className={cx('select-list__item')} key={option.id}>
             <Checkbox
-              type="box"
+              id={`select-list-checkbox-${String(option.id)}`}
+              variant="box"
               display="block"
               className={cx('select-list__checkbox')}
               checked={isSelected(option, value)}

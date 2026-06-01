@@ -1,25 +1,25 @@
-@use '../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../shared/stylesheets/tokens' as *;
 
 .button-link {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: $color-grey-50;
   width: max-content;
-  padding: 10px 8px;
+  padding: $padding-sm-2 $padding-sm;
   text-decoration: none;
   cursor: pointer;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 6px;
+  gap: $gap-sm;
+  font-size: $text-md-2;
+  font-weight: $weight-bold;
+  border-radius: $radius-sm;
   align-items: center;
 
   &__text {
-    margin: 0px;
+    margin: $margin-min;
   }
 
   &:hover {
-    background-color: v.$colors-magneto-neutral-gray-5;
+    background-color: $color-grey-200;
     transition: all ease-in-out 0.3s;
   }
 }

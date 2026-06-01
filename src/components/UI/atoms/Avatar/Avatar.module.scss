@@ -1,0 +1,57 @@
+@use '../../../../shared/stylesheets/tokens' as *;
+@use '../../../../shared/stylesheets/icon-glyph' as *;
+
+$avatar-size: $scale-rem-5xl;
+$avatar-fallback-icon-size: $icon-md;
+
+.magneto-ui-avatar {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: default;
+
+  &--interactive {
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: $border-2 solid $color-blue-light-300;
+      outline-offset: $scale-px-xs;
+      border-radius: $radius-full;
+    }
+  }
+
+
+  &__image {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: $radius-full;
+    object-fit: cover;
+  }
+
+  &__fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: $radius-full;
+    background-color: $color-grey-200;
+    color: $color-grey-600;
+  }
+
+  &__fallback-icon {
+    @extend .magneto-ui-icon-glyph;
+    width: $avatar-fallback-icon-size;
+    height: $avatar-fallback-icon-size;
+  }
+
+  &__fallback-image {
+    width: $icon-lg;
+    height: $icon-lg;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+}

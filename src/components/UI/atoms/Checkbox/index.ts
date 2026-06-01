@@ -1,2 +1,7 @@
 export { Checkbox } from './Checkbox.component'
-export * from './Checkbox.interface'
+export type {
+  ICheckbox,
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxDisplay
+} from './Checkbox.interface'

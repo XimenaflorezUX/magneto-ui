@@ -1,25 +1,24 @@
-@use '../../../../shared/stylesheets/variables.scss' as v;
 @use '../../../../shared/stylesheets/tokens' as *;
 
 .magneto-ui-save-button {
   border: none;
   border-radius: $radius-3xl;
-  background-color: transparent;
+  background-color: $color-transparent;
   padding: $padding-sm-2 $padding-md;
   cursor: pointer;
 
   &__mobile-text {
-    margin: 0px;
-    font-size: 14px;
+    margin: $margin-min;
+    font-size: $text-md-2;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $weight-normal;
     line-height: normal;
-    color: v.$text-color-black;
+    color: $color-grey-900;
   }
 
   &.hover-effect {
     &:hover {
-      background-color: v.$colors-magneto-neutral-gray-5;
+      background-color: $color-grey-200;
       transition: all ease-in-out 0.3s;
       transform: scale(1.001);
     }

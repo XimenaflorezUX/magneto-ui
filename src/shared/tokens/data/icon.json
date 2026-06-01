@@ -1,0 +1,23 @@
+{
+  "values": {
+    "xs": "scale.$scale-px-md",
+    "sm": "scale.$scale-px-lg",
+    "md": "scale.$scale-px-xl",
+    "lg": "scale.$scale-px-2xl",
+    "xl": "scale.$scale-px-4xl"
+  },
+  "utilities": {
+    "imports": [
+      {
+        "file": "_scale.scss",
+        "alias": "scale"
+      }
+    ]
+  },
+  "docs": {
+    "description": "Icon size tokens for the Magneto Design System iconography layer. Maps semantic sizes to the scale foundation.",
+    "example": "```scss\n.magneto-ui-icon--size-md {\n  width: $icon-md;\n  height: $icon-md;\n}\n```",
+    "category": "iconography",
+    "tags": "icon, size, iconography, design-system"
+  }
+}

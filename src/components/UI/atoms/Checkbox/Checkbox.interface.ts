@@ -1,22 +1,24 @@
-export interface ICheckbox extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+export type CheckboxSize = 'sm' | 'md'
+
+/** `background` = Figma check+text (grey-100 card). `box` = control + label only. */
+export type CheckboxVariant = 'box' | 'background'
+
+export type CheckboxDisplay = 'inline' | 'block'
+
+export interface ICheckbox
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size' | 'type'> {
   /**
-   * event to controll the change value component.
-   * @param checked
-   * @returns
+   * Associates the visible label with the input (`htmlFor`). Auto-generated if omitted.
    */
+  id?: string
+  /** Controlled checked state (Figma `estado=select`). */
+  checked?: boolean
+  /** Indeterminate / mixed (Figma `estado=three state`). */
+  indeterminate?: boolean
   onChange?: (checked: boolean) => void
-  /**
-   * change UI behavior with this prop.
-   */
-  type?: 'box' | 'background'
-  /**
-   * change display behavior for checkbox.
-   */
-  display?: 'inline' | 'block'
-  /**
-   * renderProp to create check component.
-   * @param props
-   * @returns
-   */
-  renderCheck?: (props: { checked: ICheckbox['checked']; type: ICheckbox['type'] }) => React.ReactNode
+  variant?: CheckboxVariant
+  /** `md`: 28px control, 20px icon, 14px label. `sm`: 20px control, 16px icon. */
+  size?: CheckboxSize
+  display?: CheckboxDisplay
+  className?: string
 }

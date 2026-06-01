@@ -3,7 +3,7 @@
 .magneto-ui-field-input {
   margin: 0;
   padding: $padding-sm 0;
-  min-height: calc($scale-rem-5xl - 2px);
+  min-height: calc($scale-rem-5xl - #{$border-1 * 2});
   border: none;
   flex: 1;
   font-weight: $weight-normal;
@@ -49,65 +49,94 @@
   flex-direction: row;
   align-items: center;
   gap: $gap-sm;
-  min-height: calc($scale-rem-5xl - 2px);
+  min-height: calc($scale-rem-5xl - #{$border-1 * 2});
   border-radius: $radius-sm;
   padding-inline: $padding-lg;
-  border: solid 1px $color-grey-200;
+  border: solid $border-1 $color-grey-200;
   cursor: text;
   transition: all ease-in-out 0.3s;
   box-sizing: border-box;
   * {
     box-sizing: border-box;
   }
+
+  // Estado Hover: borde más definido sin alterar la estructura
+  &:hover:not(&--disabled):not(&--readonly):not(&--error):not(&--list-opened) {
+    border-color: $color-grey-300;
+  }
+
+  // Estado Focus: color de marca como señal de interacción activa
+  &:focus-within:not(&--disabled):not(&--readonly):not(&--error):not(&--list-opened) {
+    border-color: $color-blue-light-200;
+    border-width: $border-1 !important;
+  }
+
   &:has(+ [data-slot='field-list'][data-state='visible']) {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
   &:has(.magneto-ui-field-input:invalid) {
     border-color: $color-red-200;
-    border-width: 1px !important;
+    border-width: $border-1 !important;
   }
+
+  // Estado List Abierto
   &--list-opened {
     &:not(.magneto-ui-field-input-wrapper--error) {
-      border-color: transparent;
+      border-color: $color-transparent;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
   }
-  /* &:focus-within {
-    border-color: $color-blue-light-200;
-    border-width: 1px !important;
-  } */
+
   &--mobile {
     cursor: default;
   }
+
+  // Estado Error: rojo semántico del sistema
   &--error {
     border-color: $color-red-200;
-    border-width: 1px !important;
+    border-width: $border-1 !important;
+    box-shadow: $shadow-none;
     &.magneto-ui-field-input-wrapper--list-opened {
-      border-bottom-color: transparent;
+      border-bottom-color: $color-transparent;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
   }
+
+  // Variante Botón: comportamiento de lista desplegable
   &--button {
     cursor: pointer;
     > .magneto-ui-field-input {
-      background-color: transparent;
+      background-color: $color-transparent;
       cursor: pointer;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+    // Estado Active/Press: retroalimentación táctil inmediata
+    &:active:not(.magneto-ui-field-input-wrapper--disabled) {
+      background-color: $color-grey-100;
+      box-shadow: $shadow-none;
+    }
   }
+
+  // Estado Disabled: superficie bloqueada sin interacción visual posible
   &--disabled {
     color: $color-grey-400;
     background-color: $color-grey-100;
+    border-color: $color-grey-200;
+    box-shadow: $shadow-none;
     cursor: not-allowed;
     > .magneto-ui-field-input {
+      color: $color-grey-400;
       cursor: not-allowed;
     }
   }
+
+  // Estado Readonly: edición bloqueada, lectura habilitada
   &--readonly {
+    border-color: $color-grey-200;
     cursor: not-allowed;
     > .magneto-ui-field-input {
       cursor: not-allowed;

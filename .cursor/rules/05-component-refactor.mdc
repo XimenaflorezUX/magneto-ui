@@ -1,0 +1,52 @@
+---
+description: Playbook operativo — refactor de componentes UI al Design System.
+globs: src/components/UI/**/*.{ts,tsx,scss}
+alwaysApply: false
+---
+# Refactor al Design System (regla operativa)
+
+**Cuándo aplica:** cuando el usuario pida **refactorizar** un componente en `src/components/UI/`.
+
+**Relación con otras reglas:**
+- `02-design-tokens.mdc` → principios generales (tokens, sin hardcode, legacy vs nuevo).
+- Esta regla (`05`) → checklist y pasos concretos de migración.
+- `03-atomic-design.mdc` → estructura, composición, a11y.
+- `04-iconography.mdc` → iconos del registro DS.
+
+Migrar al **Design Tokens** generado. No mezclar con la capa legacy.
+
+## Dos fuentes en el repo
+
+| Capa | Ruta | Uso |
+|------|------|-----|
+| **NUEVA (obligatoria en refactors)** | JSON: `src/shared/tokens/data/` · SCSS: `src/shared/stylesheets/tokens/` | Design Tokens / Foundations |
+| **LEGACY (prohibida en refactors)** | `src/shared/stylesheets/variables.scss` | Paleta histórica pre-DS |
+
+## SCSS — import obligatorio
+
+```scss
+@use '../../../../shared/stylesheets/tokens' as *;
+```
+
+Ajusta la profundidad de `../` según la carpeta del componente. **No** importes `variables.scss` en componentes refactorizados.
+
+## Variables permitidas
+
+Usa tokens semánticos generados: `$color-*`, `$text-*`, `$scale-*`, `$padding-*`, `$gap-*`, `$radius-*`, `$weight-*`, `$border-*`, `$shadow-*`, `$icon-*`, `$opacity-*`.
+
+**Prohibido:** HEX/RGB, `px`/`rem` mágicos si existe token equivalente, y mezclar legacy + tokens en el mismo archivo.
+
+## Checklist por componente
+
+1. **SCSS:** solo tokens nuevos; BEM `magneto-ui-{componente}`.
+2. **TSX:** `data-lib="magneto-ui"`, props tipadas, JSDoc + a11y (ver `03-atomic-design.mdc`).
+3. **Iconos:** `@shared/icons` / `renderIconSlot` (ver `04-iconography.mdc`). No `icons.constants` en código nuevo.
+4. **Átomos:** no importar otros átomos; infra compartida en `@shared/`.
+5. **Storybook:** `autodocs`, controles sin inyectar `{}` en props objeto/ReactNode.
+6. **Figma:** alinear variantes/tamaños cuando exista componente en librería DS.
+
+## Referencias
+
+- Modelo: `src/components/UI/atoms/Button/`
+- Foundations (docs): `src/components/docs/DesignSystem/`
+- Generar tokens: `yarn generate:tokens`

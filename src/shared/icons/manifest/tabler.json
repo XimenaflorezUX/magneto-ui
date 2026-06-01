@@ -1,0 +1,914 @@
+[
+  {
+    "name": "alert-circle",
+    "nodeId": "1623:661",
+    "figmaName": "alert-circle",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "arrow-bar-to-down",
+    "nodeId": "1623:494",
+    "figmaName": "arrow-bar-to-down",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "arrow-bar-up",
+    "nodeId": "1623:686",
+    "figmaName": "arrow-bar-up",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "arrow-right",
+    "nodeId": "1623:627",
+    "figmaName": "arrow-right",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "award",
+    "nodeId": "1623:411",
+    "figmaName": "award",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "backhoe",
+    "nodeId": "1623:939",
+    "figmaName": "backhoe",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "behance",
+    "nodeId": "1623:1003",
+    "figmaName": "Behance",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "blockquote",
+    "nodeId": "1623:399",
+    "figmaName": "blockquote",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "bold",
+    "nodeId": "1623:512",
+    "figmaName": "bold",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "bookmark",
+    "nodeId": "1623:980",
+    "figmaName": "bookmark",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "bookmark-plus",
+    "nodeId": "1623:957",
+    "figmaName": "bookmark-plus",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-facebook",
+    "nodeId": "1623:639",
+    "figmaName": "brand-facebook",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-instagram",
+    "nodeId": "1623:632",
+    "figmaName": "brand-instagram",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-linkedin",
+    "nodeId": "1623:516",
+    "figmaName": "brand-linkedin",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-tiktok",
+    "nodeId": "1623:646",
+    "figmaName": "brand-tiktok",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-twitter",
+    "nodeId": "1623:597",
+    "figmaName": "brand-twitter",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-whatsapp",
+    "nodeId": "1623:709",
+    "figmaName": "brand-whatsapp",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brand-youtube",
+    "nodeId": "1623:642",
+    "figmaName": "brand-youtube",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brief",
+    "nodeId": "1623:349",
+    "figmaName": "brief",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "brush",
+    "nodeId": "1623:562",
+    "figmaName": "brush",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "building",
+    "nodeId": "1623:773",
+    "figmaName": "building",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "building-skyscraper",
+    "nodeId": "1623:971",
+    "figmaName": "building-skyscraper",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "bulb",
+    "nodeId": "1623:851",
+    "figmaName": "bulb",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "calendar-event",
+    "nodeId": "1623:616",
+    "figmaName": "calendar-event",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "calendar-time",
+    "nodeId": "1623:795",
+    "figmaName": "calendar-time",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "certificate",
+    "nodeId": "1623:673",
+    "figmaName": "certificate",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "check",
+    "nodeId": "1623:458",
+    "figmaName": "check",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "checks",
+    "nodeId": "1623:733",
+    "figmaName": "checks",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "circle",
+    "nodeId": "1623:812",
+    "figmaName": "circle",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "circle-minus",
+    "nodeId": "1623:808",
+    "figmaName": "circle-minus",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "circle-square",
+    "nodeId": "1623:540",
+    "figmaName": "circle-square",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "click",
+    "nodeId": "1623:653",
+    "figmaName": "click",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "clock",
+    "nodeId": "1623:391",
+    "figmaName": "clock",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "close",
+    "nodeId": "1623:623",
+    "figmaName": "close",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "cloud-upload",
+    "nodeId": "1623:681",
+    "figmaName": "cloud-upload",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "coin",
+    "nodeId": "1623:549",
+    "figmaName": "coin",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "copy",
+    "nodeId": "1623:649",
+    "figmaName": "copy",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "corner-down-left-double",
+    "nodeId": "1623:729",
+    "figmaName": "corner-down-left-double",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "corner-down-right-double",
+    "nodeId": "1623:725",
+    "figmaName": "corner-down-right-double",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "cpu",
+    "nodeId": "1623:900",
+    "figmaName": "cpu",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "current-location",
+    "nodeId": "1623:949",
+    "figmaName": "current-location",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "disabled",
+    "nodeId": "1623:983",
+    "figmaName": "disabled",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "eye",
+    "nodeId": "1623:582",
+    "figmaName": "eye",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "eye-off",
+    "nodeId": "1623:600",
+    "figmaName": "eye-off",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-certificate",
+    "nodeId": "1623:703",
+    "figmaName": "file-certificate",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-check",
+    "nodeId": "1623:483",
+    "figmaName": "file-check",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-download",
+    "nodeId": "1623:822",
+    "figmaName": "file-download",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-export",
+    "nodeId": "1623:545",
+    "figmaName": "file-export",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-spreadsheet",
+    "nodeId": "1623:815",
+    "figmaName": "file-spreadsheet",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-text",
+    "nodeId": "1623:555",
+    "figmaName": "file-text",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "file-upload",
+    "nodeId": "1623:416",
+    "figmaName": "file-upload",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "friends",
+    "nodeId": "1623:469",
+    "figmaName": "friends",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "handler",
+    "nodeId": "1623:920",
+    "figmaName": "handler",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "headset",
+    "nodeId": "1623:737",
+    "figmaName": "headset",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "history",
+    "nodeId": "1623:721",
+    "figmaName": "history",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "id",
+    "nodeId": "1623:444",
+    "figmaName": "id",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "italic",
+    "nodeId": "1623:605",
+    "figmaName": "italic",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "language",
+    "nodeId": "1623:433",
+    "figmaName": "language",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "link",
+    "nodeId": "1623:423",
+    "figmaName": "link",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "list",
+    "nodeId": "1623:331",
+    "figmaName": "list",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "list-check",
+    "nodeId": "1623:371",
+    "figmaName": "list-check",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "list-numbers",
+    "nodeId": "1623:501",
+    "figmaName": "list-numbers",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "mail",
+    "nodeId": "1623:440",
+    "figmaName": "mail",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "man",
+    "nodeId": "1623:530",
+    "figmaName": "man",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "map-pin",
+    "nodeId": "1623:360",
+    "figmaName": "map-pin",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "medal",
+    "nodeId": "1623:384",
+    "figmaName": "medal",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "mood-kid",
+    "nodeId": "1623:451",
+    "figmaName": "mood-kid",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "more",
+    "nodeId": "1623:828",
+    "figmaName": "more",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "pacman",
+    "nodeId": "1623:428",
+    "figmaName": "pacman",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "palette",
+    "nodeId": "1623:488",
+    "figmaName": "palette",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "pencil",
+    "nodeId": "1623:462",
+    "figmaName": "pencil",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "phone",
+    "nodeId": "1623:466",
+    "figmaName": "phone",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "photo",
+    "nodeId": "1623:339",
+    "figmaName": "photo",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "play",
+    "nodeId": "1623:929",
+    "figmaName": "play",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "player-play",
+    "nodeId": "1623:897",
+    "figmaName": "player-play",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "puzzle",
+    "nodeId": "1623:932",
+    "figmaName": "puzzle",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "qrcode",
+    "nodeId": "1623:989",
+    "figmaName": "qrcode",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "question",
+    "nodeId": "1623:863",
+    "figmaName": "question",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "school",
+    "nodeId": "1623:379",
+    "figmaName": "school",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "share",
+    "nodeId": "1623:568",
+    "figmaName": "share",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "smart-home",
+    "nodeId": "1623:669",
+    "figmaName": "smart-home",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "sort-ascending",
+    "nodeId": "1623:867",
+    "figmaName": "sort-ascending",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "sort-descending",
+    "nodeId": "1623:874",
+    "figmaName": "sort descending",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "speakerphone",
+    "nodeId": "1623:840",
+    "figmaName": "speakerphone",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "tags",
+    "nodeId": "1623:407",
+    "figmaName": "tags",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "target-arrow",
+    "nodeId": "1623:856",
+    "figmaName": "target-arrow",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "trash",
+    "nodeId": "1623:692",
+    "figmaName": "trash",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "trophy",
+    "nodeId": "1623:760",
+    "figmaName": "trophy",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "tyipography",
+    "nodeId": "1623:575",
+    "figmaName": "tyipography",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "underline",
+    "nodeId": "1623:508",
+    "figmaName": "underline",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "urgent",
+    "nodeId": "1623:924",
+    "figmaName": "urgent",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "urgent-bold",
+    "nodeId": "1883:40",
+    "figmaName": "urgent-bold",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user",
+    "nodeId": "1623:699",
+    "figmaName": "user",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-check",
+    "nodeId": "1623:755",
+    "figmaName": "user-check",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-circle",
+    "nodeId": "1623:365",
+    "figmaName": "user-circle",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-close",
+    "nodeId": "1623:743",
+    "figmaName": "user-close",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-cog",
+    "nodeId": "1623:713",
+    "figmaName": "user-cog",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-exclamation",
+    "nodeId": "1623:748",
+    "figmaName": "user-exclamation",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-off",
+    "nodeId": "1623:790",
+    "figmaName": "user-off",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-pause",
+    "nodeId": "1623:834",
+    "figmaName": "user-pause",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-plus",
+    "nodeId": "1623:768",
+    "figmaName": "user-plus",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-question",
+    "nodeId": "1623:881",
+    "figmaName": "user-question",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-scan",
+    "nodeId": "1623:912",
+    "figmaName": "user-scan",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-search",
+    "nodeId": "1623:476",
+    "figmaName": "user-search",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-square-rounded",
+    "nodeId": "1623:887",
+    "figmaName": "user-square-rounded",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "user-star",
+    "nodeId": "1623:892",
+    "figmaName": "user-star",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "users",
+    "nodeId": "1623:610",
+    "figmaName": "users",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "video",
+    "nodeId": "1623:395",
+    "figmaName": "video",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "window-maximize",
+    "nodeId": "1623:965",
+    "figmaName": "window-maximize",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "woman",
+    "nodeId": "1623:535",
+    "figmaName": "woman",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "world",
+    "nodeId": "1623:523",
+    "figmaName": "world",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "x",
+    "nodeId": "1623:1008",
+    "figmaName": "X",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "zoom-in",
+    "nodeId": "1623:591",
+    "figmaName": "zoom-in",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  },
+  {
+    "name": "zoom-out",
+    "nodeId": "1623:586",
+    "figmaName": "zoom-out",
+    "family": "tabler",
+    "fileKey": "u1kcWn7lev6qcjJnUSbOMk",
+    "hasAsset": true
+  }
+]

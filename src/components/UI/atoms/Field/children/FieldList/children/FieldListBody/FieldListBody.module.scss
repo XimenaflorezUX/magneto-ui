@@ -14,13 +14,13 @@
     padding-bottom: $padding-sm;
   }
   &::-webkit-scrollbar {
-    width: 10px;
+    width: $scale-px-sm-2;
     &-thumb {
       cursor: default;
-      background: transparent;
+      background: $color-transparent;
       border: none;
-      border-color: transparent;
-      border-radius: 20px;
+      border-color: $color-transparent;
+      border-radius: $radius-xl;
       background: $color-grey-400;
     }
   }

@@ -1,4 +1,5 @@
 @use '../../../../../../shared/stylesheets/mixins.scss' as *;
+@use '../../../../../../shared/stylesheets/tokens' as *;
 
 .select-list {
   position: absolute;
@@ -30,22 +31,13 @@
   }
 
   &__checkbox {
-    padding: 12px 13px;
-    padding-left: calc(32px + 18px);
-    border-radius: 8px;
-    transition: all linear 300ms;
-    &::before {
-      left: 13px;
-      top: 10px;
-    }
-
-    &::after {
-      left: 14px;
-      top: 12px;
-    }
+    padding: $padding-md $padding-sm-2;
+    border-radius: $radius-md;
+    transition: background-color 0.3s linear;
+    gap: $gap-sm-2;
 
     &:hover {
-      background: #f0f1f3;
+      background-color: $color-grey-100;
     }
   }
 }

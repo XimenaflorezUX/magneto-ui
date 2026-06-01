@@ -1,8 +1,16 @@
 import React from 'react'
+import { classNames, useElementId } from '@shared/utils/common'
 import { IRadioDefaultProps } from './RadioDefault.interface'
 import styles from './RadioDefault.module.scss'
-import CNM from '@utils/classNameManager/classNameManager.util'
 
+const cx = classNames.bind(styles)
+
+/**
+ * Radio control with circular indicator — Magneto DS (Figma: radio button+ text).
+ *
+ * **a11y:** Native `<input type="radio">` in `<label htmlFor>`. Same `name` for mutually exclusive groups.
+ * Keyboard: arrows in group (browser); `:focus-visible` on label. Use `<fieldset>` + `<legend>` for groups.
+ */
 const Component: React.FC<IRadioDefaultProps> = ({
   checked,
   children,
@@ -10,34 +18,53 @@ const Component: React.FC<IRadioDefaultProps> = ({
   className,
   defaultChecked,
   disabled,
-  id,
+  id: idProp,
   indicatorClassName,
-  onChange
+  onChange,
+  size = 'md',
+  withBackground = true
 }) => {
+  const isChecked = Boolean(checked ?? defaultChecked)
+  const generatedId = useElementId('magneto-ui-radio')
+  const inputId = idProp ?? generatedId
+
   return (
     <label
-      className={CNM.get({ styles, cls: ['radio-default', disabled && 'radio-default--disabled', className] })}
-      htmlFor={id}
+      data-lib="magneto-ui"
+      data-slot="radio"
+      data-size={size}
+      className={cx(
+        'magneto-ui-radio',
+        isChecked ? 'magneto-ui-radio--checked' : undefined,
+        disabled ? 'magneto-ui-radio--disabled' : undefined,
+        withBackground ? undefined : 'magneto-ui-radio--inline-only',
+        className
+      )}
+      htmlFor={inputId}
     >
-      <input type="radio" id={id} disabled={disabled} checked={!!checked || !!defaultChecked} onChange={onChange} />
-      <div
-        className={CNM.get({
-          styles,
-          cls: [
-            'radio-default__indicator',
-            (checked || defaultChecked) && 'radio-default__indicator--checked',
-            indicatorClassName
-          ]
-        })}
+      <span
+        className={cx(
+          'magneto-ui-radio__indicator',
+          `magneto-ui-radio__indicator--${size}`,
+          isChecked ? 'magneto-ui-radio__indicator--checked' : undefined,
+          indicatorClassName
+        )}
+        aria-hidden="true"
       />
-      {children && (
-        <span className={CNM.get({ styles, cls: ['radio-default-label', childrenClassName] })}>{children}</span>
+      <input
+        type="radio"
+        id={inputId}
+        className={cx('magneto-ui-radio__input')}
+        disabled={disabled}
+        checked={isChecked}
+        onChange={onChange}
+        aria-checked={isChecked}
+      />
+      {children != null && (
+        <span className={cx('magneto-ui-radio__label', childrenClassName)}>{children}</span>
       )}
     </label>
   )
 }
 
-/**
- * Molecule UI component for radio default
- */
 export const RadioDefault = Component

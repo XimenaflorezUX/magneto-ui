@@ -1,26 +1,27 @@
-@use '../../../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../../../shared/stylesheets/tokens' as *;
+
 .magneto-ui-drop-down-button {
   cursor: pointer;
-  width: 100%;
-  background-color: white;
-  border: 1px solid #e9e9f6;
-  border-radius: 12px;
-  padding: 19px 18px;
+  width: $scale-full;
+  background-color: $color-grey-50;
+  border: $border-1 solid $color-grey-200;
+  border-radius: $radius-md;
+  padding: $padding-xl;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #14141c;
-  font-size: 14px;
+  color: $color-grey-900;
+  font-size: $text-md-2;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $weight-normal;
   line-height: normal;
   transition: all ease-in-out 0.3s;
   &:hover {
-    border: solid 1px v.$color-primary-green;
+    border: solid $border-1 $color-green-500;
   }
 
   img {
-    width: 20px;
-    height: 20px;
+    width: $scale-px-xl;
+    height: $scale-px-xl;
   }
 }

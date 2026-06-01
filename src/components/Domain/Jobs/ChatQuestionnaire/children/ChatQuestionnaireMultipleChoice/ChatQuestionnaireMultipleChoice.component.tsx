@@ -61,6 +61,7 @@ export const ChatQuestionnaireMultipleChoice: React.FC<IChatQuestionnaireMultipl
       <div className={cx('answers')}>
         {question.possibleAnswers.map((possibleAnswer) => (
           <Checkbox
+            variant="box"
             className={cx('answers__option', {
               'answers__option--selected': selectedAnswerIds.includes(possibleAnswer.id)
             })}
@@ -69,7 +70,6 @@ export const ChatQuestionnaireMultipleChoice: React.FC<IChatQuestionnaireMultipl
             id={`multiple-${possibleAnswer.id}`}
             checked={selectedAnswerIds.includes(possibleAnswer.id)}
             onChange={() => handleCheckboxChange(possibleAnswer.id)}
-            renderCheck={() => null}
           >
             {possibleAnswer.titleAnswer}
           </Checkbox>

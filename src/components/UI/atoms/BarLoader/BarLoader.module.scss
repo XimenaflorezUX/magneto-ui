@@ -1,31 +1,34 @@
-@use '../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../shared/stylesheets/tokens' as *;
 
 .magneto-ui-bar-loader {
-  width: 100%;
-  height: 5px;
-  background-color: rgba(0, 0, 0, 0.06);
-  border-radius: 10px;
+  width: $scale-full;
+  height: $scale-px-sm;
+  background-color: $color-grey-100;
+  border-radius: $radius-4xl;
   overflow: hidden;
-  margin: 20px 0;
+  margin: $margin-lg 0;
 
   &__bar {
-    height: 100%;
-    border-radius: 10px;
-    background-color: var(--bar-loader-color, v.$color-blue-primary);
+    height: $scale-full;
+    border-radius: $radius-4xl;
+    background-color: var(--bar-loader-color, #{$color-blue-dark-400});
+
     &--animated {
-      width: 100%;
-      animation: progress 1.5s linear infinite;
+      width: $scale-full;
+      animation: magneto-ui-bar-loader-progress 1.5s linear infinite;
     }
+
     &--completed {
-      transition: width 0.5s ease-in-out;
       width: var(--bar-loader-completed, 0%);
+      transition: width 0.5s ease-in-out;
     }
   }
 
-  @keyframes progress {
+  @keyframes magneto-ui-bar-loader-progress {
     0% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(100%);
     }

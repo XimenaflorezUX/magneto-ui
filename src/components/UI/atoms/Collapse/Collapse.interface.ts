@@ -1,16 +1,13 @@
-export type TCollapse = React.HTMLAttributes<HTMLDivElement> & Partial<ICollapseContext>
+export type CollapsePanelVariant = 'dark'
+
+export type TCollapse = React.HTMLAttributes<HTMLDivElement> &
+  Partial<ICollapseContext> & {
+    /** Optional preset panel surface (e.g. dark header panels). */
+    panelVariant?: CollapsePanelVariant
+  }
 
 export interface ICollapseContext {
-  /**
-   * Is collapse open by default
-   */
   defaultOpen?: boolean
-  /**
-   * Is collapse open
-   */
   open: boolean
-  /**
-   * Function when collapse open
-   */
   onChangeOpen: (open: boolean) => void
 }

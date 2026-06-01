@@ -21,13 +21,13 @@
     color: $color-grey-500;
   }
   &::-webkit-scrollbar {
-    width: 10px;
+    width: $scale-px-sm-2;
     &-thumb {
       cursor: default;
-      background: transparent;
+      background: $color-transparent;
       border: none;
-      border-color: transparent;
-      border-radius: 20px;
+      border-color: $color-transparent;
+      border-radius: $radius-xl;
       background: $color-grey-400;
     }
   }
@@ -38,31 +38,56 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: calc(2px / $scale-px-base) * 1rem;
-  min-height: calc($scale-rem-5xl - 2px);
+  gap: $gap-xs;
+  min-height: calc($scale-rem-5xl - #{$border-1 * 2});
   border-radius: $radius-sm;
   padding: $padding-sm;
-  border: solid 1px $color-grey-200;
+  border: solid $border-1 $color-grey-200;
   cursor: text;
   transition: all ease-in-out 0.3s;
   + [data-slot='field-list'] {
     display: none;
   }
+
+  // Estado Hover: borde un paso más oscuro que el default para indicar interactividad
+  &:hover:not(&--disabled):not(&--readonly):not(&--error) {
+    border-color: $color-grey-300;
+  }
+
+  // Estado Focus: color de marca para comunicar que el campo está activo
+  &:focus-within:not(&--disabled):not(&--readonly):not(&--error) {
+    border-color: $color-blue-light-200;
+    border-width: $border-1 !important;
+  }
+
+  // Estado Error
   &--error {
     border-color: $color-red-200;
+    border-width: $border-1 !important;
+    box-shadow: $shadow-none;
   }
+
+  // Estado Disabled: superficie bloqueada, sin interacción visual
   &--disabled {
     color: $color-grey-400;
     background-color: $color-grey-100;
+    border-color: $color-grey-200;
+    box-shadow: $shadow-none;
     cursor: not-allowed;
     > .magneto-ui-field-area {
+      color: $color-grey-400;
       cursor: not-allowed;
+      resize: none;
     }
   }
+
+  // Estado Readonly: estructura intacta, edición bloqueada
   &--readonly {
+    border-color: $color-grey-200;
     cursor: not-allowed;
     > .magneto-ui-field-area {
       cursor: not-allowed;
+      resize: none;
     }
   }
 }

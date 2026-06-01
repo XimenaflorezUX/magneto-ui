@@ -1,13 +1,30 @@
+@use '../../../../shared/stylesheets/tokens' as *;
+
 .magneto-ui-comparative-counter {
-  font-size: 13px;
-  color: #667688;
-  font-weight: bold;
-  margin: 5px 0px;
-  > span {
-    font-weight: normal;
-    color: #667688;
+  margin: $margin-xs 0;
+  font-size: $text-md-2;
+  font-weight: $weight-bold;
+  color: $color-grey-600;
+  line-height: $scale-rem-lg;
+
+  &__max {
+    font-weight: $weight-normal;
+    color: $color-grey-600;
   }
-}
-.error-label {
-  color: red;
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--over-max {
+    color: $color-red-200;
+  }
 }

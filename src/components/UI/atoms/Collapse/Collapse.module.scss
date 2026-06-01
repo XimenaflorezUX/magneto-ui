@@ -1,0 +1,19 @@
+@use '../../../../shared/stylesheets/tokens' as *;
+@use '../../../../shared/stylesheets/icon-glyph' as *;
+
+.magneto-ui-collapse {
+  display: flex;
+  flex-direction: column;
+  width: $scale-full;
+
+  &--panel-dark {
+    padding: $padding-sm-2;
+    border-radius: $radius-sm;
+    background-color: $color-blue-dark-300;
+    color: $color-grey-50;
+  }
+
+  &__body-padding {
+    padding: $padding-sm-2;
+  }
+}

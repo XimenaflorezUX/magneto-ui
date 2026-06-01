@@ -1,26 +1,14 @@
 export interface IBarChart {
-  /**
-   * Sets the range of the bar
-   */
+  /** Salary or value range `[min, max]` shown in the popover. */
   bin: number[]
-  /**
-   * Sets the percentage of the bar
-   */
+  /** Bar height as a fraction of `maxPercentage` (0–1). */
   heightPercentage: number
-  /**
-   * Sets the description text of the bar
-   */
+  /** Label suffix in the popover (e.g. "empleos"). */
   jobText: string
-  /**
-   * Sets the maximum percentage of the bar
-   */
+  /** Denominator for height calculation. Defaults to `1`. */
   maxPercentage?: number
-  /**
-   * Sets the maximum height of the bar
-   */
+  /** Maximum bar height in pixels (dynamic layout). Defaults to `400`. */
   maxHeight?: number
-  /**
-   * Point color (RGB) or color
-   */
+  /** Top marker color (CSS). Defaults to `$color-blue-light-400` via SCSS. */
   point?: string
 }

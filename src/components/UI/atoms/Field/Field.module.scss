@@ -3,5 +3,5 @@
 .magneto-ui-field {
   display: flex;
   flex-direction: column;
-  gap: calc(2px / $scale-px-base) * 1rem;
+  gap: $gap-xs;
 }

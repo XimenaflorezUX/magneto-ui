@@ -8,7 +8,7 @@ import path from 'path'
 import dotEnv from 'dotenv'
 import packageJson from './package.json'
 
-const { ASSETS_CDN_URL } = dotEnv.config().parsed
+const { ASSETS_CDN_URL = 'https://dev.cdn.magneto365.com/' } = dotEnv.config().parsed || {}
 
 export const MAIN_PLUGINS = [
   peerDepsExternal(),

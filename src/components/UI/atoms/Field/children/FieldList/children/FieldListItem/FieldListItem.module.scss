@@ -3,7 +3,7 @@
 .magneto-ui-field-list-item {
   border-radius: $radius-sm;
   padding: $padding-sm $padding-lg;
-  min-height: calc(36px / $scale-px-base) * 1rem;
+  min-height: $scale-rem-5xl;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -11,10 +11,31 @@
   color: $color-grey-700;
   cursor: default;
   transition: all ease-in-out 0.3s;
+
+  // Estado Hover: superficie neutra de reconocimiento
   &:hover {
     background-color: $color-grey-100;
+    color: $color-grey-800;
   }
+
+  // Estado Active/Press: retroalimentación táctil con color de marca
+  &:active {
+    background-color: $color-blue-light-100;
+    color: $color-grey-900;
+  }
+
+  // Estado Selected: visualmente distinto del hover con tinte de marca
   &--selected {
-    background-color: $color-grey-100;
+    background-color: $color-blue-light-50;
+    color: $color-grey-800;
+
+    &:hover {
+      background-color: $color-blue-light-100;
+    }
+
+    &:active {
+      background-color: $color-blue-light-200;
+      color: $color-grey-900;
+    }
   }
 }

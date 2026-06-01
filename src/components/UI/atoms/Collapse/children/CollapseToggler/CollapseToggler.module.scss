@@ -1,10 +1,32 @@
+@use '../../../../../../shared/stylesheets/tokens' as *;
+@use '../../../../../../shared/stylesheets/icon-glyph' as *;
+
 .magneto-ui-collapse-toggler {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  padding: $padding-xs;
   cursor: pointer;
   border: none;
-  background-color: transparent;
+  background-color: $color-transparent;
+  color: inherit;
   transition: transform 0.3s ease;
+
+  &:focus-visible {
+    outline: $border-2 solid $color-blue-light-300;
+    outline-offset: $scale-px-xs;
+    border-radius: $radius-xs;
+  }
+
+  &[aria-expanded='true'] {
+    transform: rotate(180deg);
+  }
+
+  &__icon {
+    @extend .magneto-ui-icon-glyph;
+    width: $icon-sm;
+    height: $icon-sm;
+  }
 }

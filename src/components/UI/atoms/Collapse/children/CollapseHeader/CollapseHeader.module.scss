@@ -1,7 +1,9 @@
+@use '../../../../../../shared/stylesheets/tokens' as *;
+
 .magneto-ui-collapse-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: $gap-sm-2;
   transition: all 0.3s ease;
 }

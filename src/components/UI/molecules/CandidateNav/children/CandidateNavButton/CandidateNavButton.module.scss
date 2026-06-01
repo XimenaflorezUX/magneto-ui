@@ -1,41 +1,43 @@
+@use '../../../../../../shared/stylesheets/tokens' as *;
+
 .magneto-ui-candidate-nav-button {
   min-height: 44px;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 12px;
+  padding: $padding-sm $padding-md;
   border: none;
-  background-color: transparent;
-  gap: 10px;
-  border-radius: 30px;
+  background-color: $color-transparent;
+  gap: $gap-sm-2;
+  border-radius: $radius-4xl;
   cursor: pointer;
   transition: all ease-in-out 0.3s;
   &--red {
-    background-color: #e10000;
+    background-color: $color-red-200;
     &:hover {
-      background-color: #8b0000;
+      background-color: $color-red-300;
     }
   }
   &--dark-blue {
-    background-color: #1a324c;
+    background-color: $color-blue-dark-300;
     &:hover {
-      background-color: #00162d;
+      background-color: $color-blue-dark-500;
     }
   }
   &--gray {
-    background-color: #f0f1f3;
+    background-color: $color-grey-100;
     &:hover {
-      background-color: #e0e4e7;
+      background-color: $color-grey-200;
     }
   }
   &--arrow {
     display: flex;
     justify-content: center;
     width: 44px;
-    background-color: transparent;
+    background-color: $color-transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: $padding-min;
   }
 }

@@ -8,6 +8,10 @@
   "description": "Magneto365 UI common components",
   "scripts": {
     "generate:tokens": "node ./.scripts/generateTokens.js",
+    "sync:icons:manifest": "node ./.scripts/syncFigmaIconManifest.js",
+    "sync:icons:export": "node ./.scripts/exportFigmaIconSvgs.js",
+    "sync:icons:normalize": "node ./.scripts/normalizeIconSvgsBatch.js",
+    "sync:icons": "node ./.scripts/syncFigmaIconManifest.js && node ./.scripts/exportFigmaIconSvgs.js && node ./.scripts/syncFigmaIconManifest.js",
     "generate:modules": "node ./.scripts/generatePackageModules.js",
     "generate:css": "node ./.scripts/generateSeparateCssFiles.js",
     "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx",

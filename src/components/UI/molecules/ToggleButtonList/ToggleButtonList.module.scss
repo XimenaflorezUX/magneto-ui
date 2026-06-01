@@ -1,5 +1,7 @@
+@use '../../../../shared/stylesheets/tokens' as *;
+
 .toggle-button-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: $gap-sm-2;
 }

@@ -1,43 +1,115 @@
-@use '../../../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../../../shared/stylesheets/tokens' as *;
 
-.magneto-ui-radio-default {
+.magneto-ui-radio {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: $gap-sm-2;
+  padding: $padding-sm;
+  border-radius: $radius-md;
+  background-color: $color-grey-100;
+  cursor: pointer;
+  color: $color-grey-900;
+  font-size: $text-md-2;
+  font-weight: $weight-normal;
+  line-height: $scale-rem-lg;
+  transition: background-color 0.15s ease;
+  border: none;
+  text-align: left;
+
+  &:has(&__input:focus-visible) {
+    outline: $border-2 solid $color-blue-light-300;
+    outline-offset: $scale-px-xs;
+  }
+
+  &--inline-only:has(&__input:focus-visible) {
+    border-radius: $radius-xs;
+  }
+
+  &:hover:not(.magneto-ui-radio--disabled) {
+    background-color: $color-grey-200;
+  }
+
+  &--checked {
+    background-color: $color-grey-200;
+  }
+
   &--disabled {
-    opacity: 0.5;
+    opacity: $opacity-50;
     pointer-events: none;
     cursor: not-allowed;
-    filter: grayscale(100%);
   }
-  input[type='radio'] {
-    display: none;
+
+  &--inline-only {
+    padding: 0;
+    background-color: $color-transparent;
+
+    &:hover:not(.magneto-ui-radio--disabled) {
+      background-color: $color-transparent;
+    }
+
+    &.magneto-ui-radio--checked {
+      background-color: $color-transparent;
+    }
   }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   &__indicator {
-    height: 20px;
-    width: 20px;
-    background-color: v.$color-white;
-    border: 1px solid #a3adb8;
-    border-radius: 50%;
     position: relative;
+    flex-shrink: 0;
+    border: $border-1 solid $color-grey-400;
+    border-radius: $radius-full;
+    background-color: $color-grey-50;
+    box-sizing: border-box;
+
+    &--md {
+      width: $scale-rem-3xl;
+      height: $scale-rem-3xl;
+    }
+
+    &--sm {
+      width: $scale-rem-xl;
+      height: $scale-rem-xl;
+    }
+
     &--checked {
-      border-color: #0cbb4e;
+      border-color: $color-green-500;
+
       &::after {
         content: '';
-        height: 14px;
-        width: 14px;
-        background-color: #0cbb4e;
-        border-radius: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        border-radius: $radius-full;
+        background-color: $color-green-500;
       }
     }
+
+    &--md#{&}--checked::after {
+      width: $scale-rem-xl;
+      height: $scale-rem-xl;
+    }
+
+    &--sm#{&}--checked::after {
+      width: $scale-rem-md;
+      height: $scale-rem-md;
+    }
   }
+
   &__label {
-    font-size: 14px;
-    font-weight: 400;
-    color: v.$text-color-black;
+    flex: 1;
+    min-width: 0;
   }
 }

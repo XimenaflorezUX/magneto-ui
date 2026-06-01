@@ -1,4 +1,4 @@
-@use '../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../shared/stylesheets/tokens' as *;
 
 .TabButtonComponent {
   display: flex;
@@ -7,9 +7,9 @@
   align-items: center;
   min-width: 90px;
   max-width: max-content;
-  height: 20px;
-  padding: 3px 8px;
-  border-radius: 6px;
+  height: $scale-rem-xl;
+  padding: $padding-xs $padding-sm;
+  border-radius: $radius-sm;
   background: var(--tab-button-color);
 
   &[data-box-shadow='true'] {
@@ -18,11 +18,11 @@
 
   a {
     > p {
-      margin: 0%;
+      margin: $margin-min;
       font-weight: var(--tab-button-text-weight);
       font-size: var(--tab-button-text-size);
-      line-height: 14px;
-      color: v.$text-color-black;
+      line-height: $scale-rem-md-2;
+      color: $color-grey-900;
     }
   }
 }

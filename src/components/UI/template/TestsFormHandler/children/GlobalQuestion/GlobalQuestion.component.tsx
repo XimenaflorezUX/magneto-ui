@@ -43,6 +43,7 @@ const GlobalQuestion: React.FC<IGlobalQuestionProps> = ({ question, errorText, i
         {question.type === 'multiple' &&
           question.options?.map((opt) => (
             <Checkbox
+              variant="box"
               key={opt.id}
               id={`${question.id}-${opt.id}`}
               checked={Array.isArray(answer) && answer.some((item: IQuestionOptions) => item.id === opt.id)}

@@ -3,7 +3,7 @@ export const classNames = {
     return (...params: Array<string | null | undefined | Record<string, boolean | undefined | null>>) =>
       params
         // avoid nullish
-        .filter((param) => param != null)
+        .filter((param): param is string | Record<string, boolean | undefined | null> => param != null)
         .map((cls) => {
           if (typeof cls === 'string') return stylesObj[cls] ?? cls
           return Object.entries(cls)

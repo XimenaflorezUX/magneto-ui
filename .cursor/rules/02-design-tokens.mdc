@@ -1,0 +1,45 @@
+---
+description: Principios generales de Design Tokens y Foundations para Magneto UI.
+globs: "*.{js,jsx,ts,tsx,css,scss}"
+alwaysApply: true
+---
+# Estándares de Tokens y Foundations (principio general)
+
+Regla de **principios**. Para el playbook paso a paso al migrar un componente UI, ver `05-component-refactor.mdc`.
+
+## Fuente de la verdad (NUEVA)
+
+| Capa | Ruta |
+|------|------|
+| JSON (editar) | `src/shared/tokens/data/` (`color.json`, `scale.json`, `text.json`, …) |
+| SCSS (consumir) | `src/shared/stylesheets/tokens/` (generado — **no editar a mano**) |
+| Docs Storybook | `src/components/docs/DesignSystem/` |
+
+Generar antes de build/Storybook: `yarn generate:tokens`.
+
+## Legacy (no usar en código nuevo ni refactors)
+
+- `src/shared/stylesheets/variables.scss` — paleta histórica pre-DS.
+- Solo tocar al mantener componentes sin refactorizar. **Prohibido** mezclar legacy + tokens nuevos en el mismo componente.
+
+## Cero valores mágicos
+
+- **Prohibido:** HEX, RGB, `px`/`rem` sueltos si existe token equivalente.
+- **Prioridad:** tokens semánticos generados (`$color-*`, `$text-*`, `$padding-*`, `$gap-*`, `$radius-*`, `$weight-*`, `$scale-*`, `$icon-*`, etc.).
+
+## Implementación SASS en componentes UI
+
+```scss
+@use '../../../../shared/stylesheets/tokens' as *;
+```
+
+Ajusta `../` según profundidad. Usa variables `$…` del barrel `tokens/_index.scss`.
+
+## Tailwind (si aplica)
+
+Usa clases del `tailwind.config.js` del proyecto cuando el componente vaya por utilidades. En SCSS de módulos del DS, prioriza tokens SASS anteriores.
+
+## Tipografía y densidad B2B
+
+- Escala del sistema: `$text-*`, `$weight-*` (no `font-size`/`font-weight` sueltos).
+- Interfaces de gestión: preferir escalas compactas (`text-sm` / `text-xs` en Tailwind, o tokens `text` equivalentes en SASS).

@@ -32,6 +32,10 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# --- SECRETOS LOCALES ---
+.env
+.env.local
+
 # --- CONFIGURACIÓN DE IDE (Cursor/VS Code) ---
 .idea/
 .vscode/

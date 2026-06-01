@@ -1,1 +1,2 @@
-export * from './Badge.component'
+export { Badge } from './Badge.component'
+export type { IBadge } from './Badge.interface'

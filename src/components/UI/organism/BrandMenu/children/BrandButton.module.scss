@@ -1,4 +1,4 @@
-@use '../../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../../shared/stylesheets/tokens' as *;
 
 .magneto-ui-brand-button {
   display: flex;
@@ -8,13 +8,13 @@
     background: none;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: $gap-sm;
     cursor: pointer;
     &--img {
       max-width: 80px;
-      max-height: 40px;
+      max-height: $scale-rem-5xl;
       object-fit: contain;
-      @media (min-width: v.$screen-md) {
+      @media (min-width: $scale-px-container-md) {
         max-width: 115px;
       }
     }

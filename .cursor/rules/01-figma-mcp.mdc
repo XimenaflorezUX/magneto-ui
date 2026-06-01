@@ -1,0 +1,24 @@
+---
+alwaysApply: true
+---
+# Extracción de Datos de Figma (Magneto UI & MCP)
+
+- **Foco Estricto y Cero Alucinaciones:**
+  - Analiza EXCLUSIVAMENTE el `Node ID` solicitado y sus hijos directos. No deduzcas el contexto de toda la página si no se te pide.
+  - Prohibición de "Alucinación Visual": Si un nodo en Figma no tiene un color de fondo, borde o sombra explícita, NO lo asumas ni lo inventes en el código.
+
+- **Traducción de Layout (B2B):**
+  - Traduce siempre el Auto Layout de Figma a Flexbox o Grid de Tailwind CSS (prestando atención a `direction`, `gap`, `padding`, `align-items`, `justify-content`).
+  - Para las interfaces B2B de Magneto, respeta estrictamente la escala de espaciado basada en múltiplos de 4px o 8px para mantener la densidad de información correcta.
+
+- **Mapeo de Tokens y Nomenclatura:**
+  - Busca siempre si el nombre de la variable de Figma coincide con la nomenclatura de la documentación (ej. `color-brand-primary`, `spacing-xs`). Si no existe un token exacto, usa el token semántico de Tailwind/SASS más cercano.
+  - Respeta los nombres de las capas (layer names) de Figma para nombrar componentes o clases en React, aplicando convenciones estándar (ej. PascalCase para componentes, kebab-case para clases).
+
+- **Variantes y Estados:**
+  - Identifica las propiedades del componente en el panel de Figma (ej. `State`, `Type`, `Hover`, `Active`, `Disabled`, `Size`) y tradúcelas directamente a `props` en los componentes de React (ej. `type="primary"`, `state="disabled"`).
+
+- **Iconografía:**
+  - No intentes recrear iconos con código SVG en línea. Si detectas un nodo de tipo "Vector" o "Icon", utiliza `<Icon name="layer-en-kebab-case" size="md" />`.
+  - Familia por defecto: `iconsax-outline` (no pases `family` salvo que Figma indique Bold, Tabler o Lucide).
+  - Ver regla `04-iconography.mdc` para el registro y tokens de tamaño.

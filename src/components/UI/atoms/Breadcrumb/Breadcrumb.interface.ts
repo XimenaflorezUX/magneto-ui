@@ -1,36 +1,21 @@
 export interface IBreadcrumb {
-  /**
-   * Sets breadcrumb text
-   */
+  /** Breadcrumb path string (segments separated by `/`). */
   breadcrumbText: string
-  /**
-   * set breadcrumb custom text
-   */
+  /** Overrides `breadcrumbText` when set. */
   breadcrumbCustomText?: string
-  /**
-   * set url breadcrumb
-   */
+  /** Legacy base URL field (retained for API compatibility). */
   baseUrl: string
-  /**
-   * add query in the url
-   */
+  /** Query string appended to server-driven links. */
   queryParams?: string
-  /**
-   * you can set urls with haveRedirect in true
-   */
+  /** When true with `breadCrumbFromServer`, renders anchor links. */
   haveRedirect?: boolean
-  /**
-   * this text replace the last position in the bredcrumbs text if it exists
-   */
+  /** Replaces the last segment label when set. */
   detailTitle?: string | null
-
-  /**
-   * This field is used to load the breadcrumbs text from the server [SEO]
-   */
+  /** Server-rendered breadcrumb labels (SEO). */
   breadCrumbFromServer?: string[]
-
-  /**
-   * This field is used to load breadcrumb URLs from the server [SEO]
-   */
+  /** URLs aligned with `breadCrumbFromServer` indices. */
   urlFromServer?: string[]
+  /** Accessible name for the `<nav>` landmark. */
+  'aria-label'?: string
+  className?: string
 }

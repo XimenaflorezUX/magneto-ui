@@ -1,0 +1,39 @@
+---
+description: Iconografía transversal del Design System (Figma libreria-Iconos).
+globs: src/**/*.{ts,tsx,scss}
+alwaysApply: true
+---
+# Iconografía (Magneto UI)
+
+## Familia por defecto
+- **`iconsax-outline`** es `ICON_FAMILY_DEFAULT`. No pases `family` salvo que Figma lo indique.
+
+## Overrides explícitos
+- **`iconsax-bold`**, **`tabler`**, **`lucide`**: solo cuando diseño lo marque en el componente de Figma.
+- Prohibido elegir familia por preferencia del desarrollador.
+
+## Storybook
+- Catálogo y documentación del átomo: **Design System → Iconography** (no bajo Atoms).
+
+## Consumo transversal
+- **Moléculas, organismos y dominio:** usa el átomo `<Icon name="kebab-case" size="md" />` desde `@components/UI/atoms`.
+- **Átomos que no pueden importar otro átomo** (regla `03-atomic-design.mdc`, ej. `Button`): usa infra en `@shared/icons` — `renderIconSlot`, `IconGlyph`, `resolveIcon` — sin importar `Icon`.
+- **No** importes SVG directamente en moléculas, organismos ni dominio.
+- **No** uses `icons.constants` en componentes nuevos del DS; amplía el registro en `src/shared/icons/registry/`.
+
+## Tamaños
+- Usa tokens semánticos: `xs` | `sm` | `md` | `lg` | `xl` (generados en `icon.json`).
+- Prohibido `size={18}` o px mágicos en componentes nuevos.
+
+## Registro (sincronizado desde Figma)
+- Catálogo: `src/shared/icons/manifest/*.json` (generado con `yarn sync:icons:manifest`).
+- Assets SVG: `src/assets/icons/{family}/{name}.svg` (exportar con `yarn sync:icons:export` + `FIGMA_ACCESS_TOKEN`).
+- Flujo completo: `yarn sync:icons` (manifest → export SVG → regenerar registries).
+- Puente legacy: `legacy-bridge.registry.ts` hasta completar export de SVGs.
+- Clave `name` en kebab-case = nombre de capa en Figma (`iconsax-bold` en Figma usa sufijo `-bold`, en código `name="add"` + `family="iconsax-bold"`).
+
+## Color
+- Por defecto el icono hereda con `currentColor` del contenedor padre (botón, link, texto).
+
+## Legacy
+- `icon={url}` e `IconItem` siguen soportados para código existente; no usarlos en componentes nuevos.

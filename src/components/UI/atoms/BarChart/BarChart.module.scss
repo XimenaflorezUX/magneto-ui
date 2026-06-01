@@ -1,51 +1,64 @@
-@use '../../../../shared/stylesheets/variables.scss' as v;
+@use '../../../../shared/stylesheets/tokens' as *;
+
+$bar-max-width: $scale-px-5xl + $scale-px-xl;
 
 .magneto-ui-chart-bar {
-  width: min(4vw, 60px);
-  background-color: #a3adb8;
+  --magneto-chart-bar-point-color: #{$color-blue-light-400};
+
+  width: min(4vw, $bar-max-width);
+  background-color: $color-grey-400;
   position: relative;
+  cursor: default;
+
+  &:focus-visible {
+    outline: $border-2 solid $color-blue-light-300;
+    outline-offset: $scale-px-xs;
+  }
 
   &__point {
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
+    height: $scale-px-sm;
+    width: $scale-px-sm;
+    border-radius: $radius-full;
     position: absolute;
-    top: -4px;
-    right: calc((min(4vw, 60px) / 2) - 4px);
+    top: calc(-1 * #{$scale-px-xs});
+    right: calc((min(4vw, #{$bar-max-width}) / 2) - #{$scale-px-xs});
+    background-color: var(--magneto-chart-bar-point-color);
   }
+
   &__popover {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    padding: 8px;
+    gap: $gap-xs;
+    border-radius: $radius-md;
+    padding: $padding-sm;
     width: max-content;
-    background-color: #292f37;
-    color: white;
-    font-family: Lato;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
+    background-color: $color-grey-800;
+    color: $color-grey-50;
+    font-size: $text-md-2;
+    font-weight: $weight-normal;
+    line-height: $scale-rem-lg;
     bottom: 100%;
     left: 50%;
     z-index: 1;
     transform: translateX(-50%);
-    margin-bottom: 8px;
+    margin-bottom: $gap-sm;
+    pointer-events: none;
   }
 
-  .popover-left {
+  &__popover--left {
     left: auto;
     right: 0;
     transform: translateX(-5%);
   }
 
-  .popover-right {
+  &__popover--right {
     left: 0;
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 
   &:hover {
-    background-color: #1a324c;
+    background-color: $color-blue-dark-300;
   }
 }

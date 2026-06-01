@@ -1,10 +1,8 @@
 export interface IBadge {
-  /**
-   * this property sets a custom number
-   */
+  /** Count displayed inside the badge. */
   number?: number
-  /**
-   * this property sets custom classname
-   */
+  /** Enables pulse animation when a count is shown. Defaults to `true`. */
+  pulse?: boolean
+  /** Additional class name on the root element. */
   className?: string
 }

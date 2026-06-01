@@ -1,40 +1,40 @@
-@use '../../../../../../shared/stylesheets/tokens' as t;
+@use '../../../../../../shared/stylesheets/tokens' as *;
 
 .button {
   display: flex;
-  gap: t.$gap-sm-2;
+  gap: $gap-sm-2;
   align-items: center;
-  border-radius: t.$radius-3xl;
-  padding: t.$padding-md t.$padding-md-2;
+  border-radius: $radius-3xl;
+  padding: $padding-md $padding-md-2;
   border: none;
 
   &--grey {
-    background-color: t.$color-grey-100;
-    color: t.$color-grey-900;
+    background-color: $color-grey-100;
+    color: $color-grey-900;
 
     &:hover {
-      background-color: t.$color-grey-200;
+      background-color: $color-grey-200;
     }
   }
 
   &--blue {
-    background-color: t.$color-blue-dark-300;
-    color: t.$color-grey-50;
+    background-color: $color-blue-dark-300;
+    color: $color-grey-50;
     &:hover {
-      background-color: t.$color-blue-dark-500;
+      background-color: $color-blue-dark-500;
     }
   }
 
   &--green {
-    background-color: t.$color-green-200;
-    color: t.$color-blue-dark-400;
+    background-color: $color-green-200;
+    color: $color-blue-dark-400;
     &:hover {
-      background-color: t.$color-green-300;
+      background-color: $color-green-300;
     }
   }
 
   &:disabled {
-    background-color: t.$color-grey-200;
-    opacity: 0.65;
+    background-color: $color-grey-200;
+    opacity: $opacity-70;
   }
 }

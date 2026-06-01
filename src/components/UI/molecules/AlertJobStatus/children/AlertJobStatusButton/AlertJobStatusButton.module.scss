@@ -1,36 +1,38 @@
-@use '../../../../../../shared/stylesheets/variables.scss' as *;
+@use '../../../../../../shared/stylesheets/tokens' as *;
+
 .alert-modal__button {
-  background-color: $color-blue-dark3;
+  background-color: $color-blue-dark-300;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: $gap-sm-2;
   border: none;
-  height: 30px;
-  font-weight: 700;
-  font-size: 14px;
-  border-radius: 30px;
+  height: $scale-rem-4xl;
+  font-weight: $weight-bold;
+  font-size: $text-md-2;
+  border-radius: $radius-4xl;
   cursor: pointer;
-  color: white;
+  color: $color-grey-50;
   text-decoration: none;
-  padding: 0;
-  width: 100%;
+  padding: $padding-min;
+  width: $scale-full;
   order: 1;
   transition: all ease-in-out 0.3s;
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $scale-px-container-md) {
     width: fit-content;
-    margin-left: auto;
+    margin-left: $margin-auto;
     order: 0;
-    padding: 0 15px;
+    padding: $padding-min $padding-lg;
   }
+
   img {
-    margin-left: 0;
+    margin-left: $margin-min;
     transition: all ease-in-out 0.3s;
   }
 
   &:hover img {
-    @media (min-width: $screen-md) {
+    @media (min-width: $scale-px-container-md) {
       transform: translateX(5px);
     }
   }

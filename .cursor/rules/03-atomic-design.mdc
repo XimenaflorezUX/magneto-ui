@@ -1,0 +1,22 @@
+---
+alwaysApply: true
+---
+# Arquitectura de Componentes (Atomic Design)
+
+- **/atoms (Átomos):** Componentes UI indivisibles y puros (ej. Botón, Input, Badge, Ícono).
+  - Regla: Un átomo NO PUEDE importar a otro átomo ni a ninguna estructura superior. No manejan lógica de negocio ni llamadas a API.
+- **/molecules (Moléculas):** Composiciones de 2 o más átomos (ej. `SearchField`, `FormItem`).
+  - Regla: Pueden importar átomos, pero NUNCA organismos. Pueden manejar estados locales sencillos (ej. limpiar un input).
+- **/organisms (Organismos):** Secciones complejas de la interfaz (ej. `DataTable`, Modales, Headers, buscador con filtros).
+  - Regla: Pueden importar átomos y moléculas. Aquí es donde se componen las partes y se integra la lógica de negocio.
+
+# Patrones de Desarrollo React
+- **Componentes Funcionales:** Todos los componentes deben ser funcionales y exponer sus props limpiamente.
+- **Composición:** Favorece fuertemente el uso de `children` o "Render Props" para que los componentes sean flexibles y reutilizables, alineándose con los ejemplos del Storybook.
+- **Documentación:** Cada componente debe incluir JSDoc en la cabecera describiendo sus `props` y sus consideraciones de accesibilidad.
+
+# Accesibilidad B2B (a11y) - MANDATORIO
+En plataformas de gestión de alto rendimiento, la accesibilidad no es opcional:
+- **Atributos ARIA:** Todo componente interactivo DEBE incluir los atributos correspondientes (ej. `aria-label`, `aria-expanded`, `aria-describedby`, o `role`).
+- **Navegación por Teclado:** Garantiza que los elementos sean 100% navegables (`tabIndex` correcto, manejo nativo o programado de teclas `Enter/Space`).
+- **Estados de Foco:** El foco (`focus-ring` o `:focus-visible`) debe ser altamente visible para la navegación con teclado. Asegúrate de que estos estados estén siempre definidos usando el color de énfasis de los tokens de Magneto.

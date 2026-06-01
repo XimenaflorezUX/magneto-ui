@@ -1,31 +1,31 @@
-@use '../../../../shared/stylesheets/variables.scss' as v;
 @use '../../../../shared/stylesheets/tokens' as *;
+
 .magneto-ui-share-button {
   border: none;
-  border-radius: 50%;
-  background-color: transparent;
-  padding: 12px 13px;
+  border-radius: $radius-4xl;
+  background-color: $color-transparent;
+  padding: $padding-md $padding-md-2;
   cursor: pointer;
 
   &__mobile-text {
-    margin: 0px;
-    font-size: 14px;
+    margin: $margin-min;
+    font-size: $text-md-2;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $weight-normal;
     line-height: normal;
-    color: v.$text-color-black;
+    color: $color-grey-900;
   }
 
   .button-content {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: $gap-xl;
   }
 }
 
 .hover-effect {
   &:hover {
-    background-color: v.$colors-magneto-neutral-gray-5;
+    background-color: $color-grey-200;
     transition: all ease-in-out 0.3s;
   }
 }

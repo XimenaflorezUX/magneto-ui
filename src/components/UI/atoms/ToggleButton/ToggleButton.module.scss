@@ -1,27 +1,29 @@
+@use '../../../../shared/stylesheets/tokens' as *;
+
 .magneto-ui-toggle-button {
   width: auto;
   height: 41px;
-  padding: 12px 15px;
-  border-radius: 8px;
+  padding: $padding-md $padding-lg;
+  border-radius: $radius-sm;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: $gap-sm;
   cursor: pointer;
   transition: filter ease-in-out 0.3s;
-  font-weight: normal;
-  border: #e3e7e9 solid 1px;
+  font-weight: $weight-normal;
+  border: $color-grey-200 solid $border-1;
   &:hover {
     filter: brightness(0.9);
   }
   &__img {
-    width: 20px;
-    height: 20px;
+    width: $scale-px-xl;
+    height: $scale-px-xl;
   }
 }
 
 .toggle-button-selected {
   border: none;
-  font-weight: bold;
+  font-weight: $weight-bold;
 }
 
 .toggle-image-selected {

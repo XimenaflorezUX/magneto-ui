@@ -1,0 +1,41 @@
+@use '../../../../shared/stylesheets/tokens' as *;
+
+.magneto-ui-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: $scale-rem-lg;
+  min-height: $scale-rem-lg;
+  margin: 0 $margin-xs;
+  padding: $padding-xs;
+  border-radius: $radius-full;
+  background-color: $color-red-200;
+  color: $color-grey-50;
+  font-size: $text-sm-2;
+  font-weight: $weight-bold;
+  line-height: 1;
+
+  &__pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: $radius-full;
+    background-color: $color-red-200;
+    opacity: 0;
+    animation: magneto-ui-badge-pulse 1.5s infinite linear both;
+    pointer-events: none;
+  }
+
+  @keyframes magneto-ui-badge-pulse {
+    20% {
+      opacity: 0.4;
+    }
+
+    80%,
+    100% {
+      opacity: 0;
+      transform: scale(1.6);
+    }
+  }
+}
