@@ -35,8 +35,11 @@ jobs:
 
       - name: Build Storybook
         env:
-          STORYBOOK_BASE_PATH: /magneto-ui/
+          STORYBOOK_PAGES: 'true'
         run: yarn build-storybook
+
+      - name: Add .nojekyll for GitHub Pages
+        run: touch storybook-static/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

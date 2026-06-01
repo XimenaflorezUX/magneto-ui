@@ -1,6 +1,34 @@
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
+/** Relative assets for GitHub Pages subpath — avoids /magneto-ui/magneto-ui/ double prefix. */
+const applyGitHubPagesPublicPath = (config) => {
+  if (process.env.STORYBOOK_PAGES === 'true') {
+    config.output = { ...config.output, publicPath: './' }
+  }
+  return config
+}
+
+const applyPreviewWebpack = (config) => {
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    '@assets': path.resolve(__dirname, '../src/assets'),
+    '@components': path.resolve(__dirname, '../src/components'),
+    '@constants': path.resolve(__dirname, '../src/constants'),
+    '@shared': path.resolve(__dirname, '../src/shared'),
+    '@utils': path.resolve(__dirname, '../src/utils')
+  }
+
+  config.resolve.plugins = [
+    ...(config.resolve.plugins || []),
+    new TsconfigPathsPlugin({
+      extensions: config.resolve.extensions
+    })
+  ]
+
+  return applyGitHubPagesPublicPath(config)
+}
+
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -35,31 +63,6 @@ module.exports = {
     autodocs: true,
     defaultName: 'Documentation'
   },
-  webpackFinal: async (config) => {
-    // 1. Corregimos los alias manuales (quitando la "/" inicial de "src")
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@assets': path.resolve(__dirname, '../src/assets'),
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@constants': path.resolve(__dirname, '../src/constants'),
-      '@shared': path.resolve(__dirname, '../src/shared'),
-      '@utils': path.resolve(__dirname, '../src/utils')
-    }
-
-    // 2. Agregamos el plugin que instaló para que lea automáticamente su tsconfig
-    config.resolve.plugins = [
-      ...(config.resolve.plugins || []),
-      new TsconfigPathsPlugin({
-        extensions: config.resolve.extensions
-      })
-    ]
-
-    // GitHub Pages project site: https://<user>.github.io/<repo>/
-    const basePath = process.env.STORYBOOK_BASE_PATH
-    if (basePath) {
-      config.output = { ...config.output, publicPath: basePath }
-    }
-
-    return config
-  }
+  webpackFinal: async (config) => applyPreviewWebpack(config),
+  managerWebpack: async (config) => applyGitHubPagesPublicPath(config)
 }
